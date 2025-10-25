@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap');
+
+@theme {
+    --color-p1: #2EF2FF;
+    --color-p2: #3C52D9;
+    --color-p3: #C8EA80;
+    --color-p4: #EAEDFF;
+    --color-p5: #C4CBF5;
+    --color-s1: #080D27;
+    --color-s2: #0C1838;
+    --color-s3: #334679;
+    --color-s4: #1959AD;
+    --color-s5: #263466;
+    --color-black: #000;
+    --color-black-100: #05091D;
+
+    --font-inter: "Inter", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+
+    --shadow-100: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 16px 24px rgba(0, 0, 0, 0.25),
+    inset 0px 3px 6px #1959AD;
+    --shadow-200: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 16px 24px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 10px #3391FF;
+    --shadow-300: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 16px 24px rgba(0, 0, 0, 0.25),
+    inset 0px 3px 6px #1959AD;
+    --shadow-400: inset 0px 2px 4px rgba(255, 255, 255, 0.05);
+    --shadow-500: 0px 16px 24px rgba(0, 0, 0, 0.25),
+    0px -14px 48px rgba(40, 51, 111, 0.7);
+
+    --radius-14: 14px;
+    --radius-20: 20px;
+    --radius-40: 40px;
+    --radius-half: 50%;
+    --radius-7xl: 40px;
+}
+
+
+html {
+    background-color: var(--color-s1);
+}
+
+body {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    color: var(--color-p5);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input {
+    letter-spacing: -0.03em;
+    background: none;
+}
