@@ -1,18 +1,42 @@
 import { Link as LinkScroll } from "react-scroll";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 
-const NavLink = ({ title }) => (
-  <LinkScroll className="text-[16px] font-bold leading-[24px] uppercase transition-colors duration-500 cursor-pointer hover:text-[#2EF2FF] max-lg:my-4 max-lg:h-5">
-    {title}
-  </LinkScroll>
-);
-
 const Header = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 32);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const NavLink = ({ title }) => (
+    <LinkScroll
+      onClick={() => setIsOpen(true)}
+      to={title}
+      offset={-100}
+      spy
+      smooth
+      activeClass="text-p3"
+      className="text-[16px] font-bold leading-[24px] uppercase transition-colors duration-500 cursor-pointer hover:text-[#2EF2FF] max-lg:my-4 max-lg:h-5"
+    >
+      {title}
+    </LinkScroll>
+  );
+
   return (
-    <header className="fixed top-0 left-0 z-50 w-full py-10 ">
+    <header
+      className={clsx(
+        "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
+        hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]",
+      )}
+    >
       <div
         className="mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
                             flex h-14 items-center"
@@ -45,7 +69,7 @@ const Header = () => {
                 <li className="relative flex flex-1 items-center justify-center">
                   <LinkScroll
                     to="hero"
-                    offset={-100}
+                    offset={-250}
                     spy
                     smooth
                     className={clsx(
