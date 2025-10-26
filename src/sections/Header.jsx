@@ -28,7 +28,7 @@ const Header = () => {
           )}
         >
           <div
-            className="w-full border-2 max-lg:relative max-lg:flex max-lg:flex-col
+            className="w-full max-lg:relative max-lg:flex max-lg:flex-col
                                     max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden
                                     max-lg:before:absolute max-lg:before:-right-64 max-lg:before:top-2/5
                                     max-lg:before:h-[440px] max-lg:before:w-[252px] max-lg:before:bg-s4
