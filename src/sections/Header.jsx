@@ -23,8 +23,10 @@ const Header = () => {
       offset={-100}
       spy
       smooth
-      activeClass="text-p3"
-      className="text-[16px] font-bold leading-[24px] uppercase transition-colors duration-500 cursor-pointer hover:text-[#2EF2FF] max-lg:my-4 max-lg:h-5"
+      activeClass="text-[#C8EA80]"
+      className={clsx(
+        "text-[16px] font-bold leading-[24px] uppercase transition-colors duration-500 cursor-pointer hover:text-[#2EF2FF] max-lg:my-4 max-lg:h-5",
+      )}
     >
       {title}
     </LinkScroll>
@@ -77,7 +79,6 @@ const Header = () => {
                     )}
                   >
                     <img
-                      className="logo"
                       src="/images/xora.svg"
                       width={160}
                       height={55}
