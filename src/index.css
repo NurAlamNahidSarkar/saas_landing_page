@@ -79,3 +79,13 @@ input {
 .g7 {
     background: linear-gradient(#1b275a, #0e1434);
 }
+
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
