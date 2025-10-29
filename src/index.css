@@ -89,3 +89,7 @@ input {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
+
+.g8 {
+    background: linear-gradient(to right, transparent, #2ef2ff, transparent);
+}
